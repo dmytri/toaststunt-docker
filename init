@@ -1,0 +1,5 @@
+#!/bin/bash
+cd toaststunt
+mkdir -p db
+[ ! -f db/toastcore.db ] && cp toastcore.db db/
+build/moo db/toastcore.db db/toastcore.db.new

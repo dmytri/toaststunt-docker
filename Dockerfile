@@ -8,6 +8,6 @@ RUN git clone https://github.com/lisdude/toaststunt.git \
     && cd build \
     && cmake ../ \
     && make -j2
-COPY toastcore.db toaststunt/db/toastcore.db
-CMD cd toaststunt \
-  && build/moo db/toastcore.db db/toastcore.db.new
+COPY toastcore.db toaststunt/toastcore.db
+COPY init toaststunt/init
+CMD bash toaststunt/init
