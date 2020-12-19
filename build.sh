@@ -1,1 +1,1 @@
-sudo docker build -t dmytri/toastunt .
+sudo docker build -t dmytri/toaststunt .
