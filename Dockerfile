@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM rust
 ENV DEBIAN_FRONTEND=noninteractive
 run apt-get -y update
 RUN apt-get -y install build-essential bison gperf cmake libsqlite3-dev \
