@@ -1,5 +1,12 @@
 #!/bin/bash
-cd toaststunt
+cd /app/toaststunt
 mkdir -p db
 [ ! -f db/toastcore.db ] && cp toastcore.db db/
-build/moo db/toastcore.db db/toastcore.db.new
+
+if [ -r db/toastcore.db.new ]; then
+	mv db/toastcore.db db/toastcore.db.old
+	mv db/toastcore.db.new db/toastcore.db
+	rm -f db/toastcore.db.old
+fi
+
+./moo db/toastcore.db db/toastcore.db.new

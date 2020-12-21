@@ -16,6 +16,7 @@ RUN cd /app/toaststunt \
     && cd build \
     && cmake ../ \
     && make -j2
+RUN cp /app/toaststunt/build/moo /app/toaststunt/moo
 COPY toastcore.db toaststunt/toastcore.db
 COPY init toaststunt/init
 CMD bash toaststunt/init
